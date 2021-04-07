@@ -44,6 +44,7 @@ window.addEventListener("DOMContentLoaded", function () {
             cards.forEach(function (frontCard) {
               frontCard.classList.remove("is-selected");
               frontCard.classList.remove("is-matched");
+              matchedCards = [];
             });
           }
         }, 500);
