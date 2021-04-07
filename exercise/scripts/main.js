@@ -37,6 +37,8 @@ window.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
           card1.classList.remove("is-selected");
           card2.classList.remove("is-selected");
+
+          // If we've matched all the cards, display a message.
           if (matchedCards.length == cards.length) {
             alert("You matched all the cards, nice job!");
           }
@@ -44,8 +46,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
         selectedCards = [];
       }
-      console.log(matchedCards.length, cards.length);
-      // If we've matched all the cards, display a message.
     });
   });
 
@@ -57,11 +57,8 @@ window.addEventListener("DOMContentLoaded", function () {
   var deckElement = document.querySelector(".cards");
   var deckColor = window.location.hash;
 
-  console.log(deckElement, deckColor);
-
   if (deckElement && deckColor) {
-    var className = "cards--" + deckColor;
+    var className = "cards--" + deckColor.substring(1);
     deckElement.classList.add(className);
-    console.log(deckElement);
   }
 });
