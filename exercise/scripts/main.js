@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
       // If we haven't selected 2 cards yet, add the current card to the
       // collection of selected cards and apply the correct CSS class.
-      if (selectedCards.length < 2) {
+      if (selectedCards.length < 3) {
         card.classList.add("is-selected");
       }
 
