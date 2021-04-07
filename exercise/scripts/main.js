@@ -38,9 +38,13 @@ window.addEventListener("DOMContentLoaded", function () {
           card1.classList.remove("is-selected");
           card2.classList.remove("is-selected");
 
-          // If we've matched all the cards, display a message.
+          // If we've matched all the cards, display a message and reset the game.
           if (matchedCards.length == cards.length) {
             alert("You matched all the cards, nice job!");
+            cards.forEach(function (frontCard) {
+              frontCard.classList.remove("is-selected");
+              frontCard.classList.remove("is-matched");
+            });
           }
         }, 500);
 
